@@ -41,16 +41,58 @@
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px; 
+  }
+  
+  .graph {
+    flex: 1;
+    text-align: center;
+  }
+
+  .bar-graph-img {
+    max-width: 64%;
+    height: auto;
+  }
+
+  .pie-chart-img {
+    max-width: 37%;
+    height: auto;
+  }
+
+  .line-graph-img {
+    max-width: 58%;
+    height: auto;
+  }
+
+.search-rates-by-office,
+.search-by-nationality,
+.search-over-time {
+    font-size: 1.4rem;
+    font-family: 'acumin';
+    font-weight: 548;
+}
+
+.btn-style {
+    background-color: #404C4A !important;
+    color: #FFFFFF !important;
+}
 
 .view-more-data-btn-container {
     height: 44px;
     width: 180px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.view-more-data-btn-container > Button:first-child {
+    margin-right: 25px;
 }
 
 .middle-section {
@@ -75,16 +117,57 @@
     font-size: 1.4rem;
 }
 
-// .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+.bottom-section {
+    text-align: center;
+}
+
+.systemic-disparity-title {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-family: 'acumin';
+    font-weight: 555;
+    font-size: 2rem;
+}
+
+.data-point-title {
+    font-weight: 550;
+    font-size: 2.4rem;
+    margin-bottom: 45px;
+    font-family: 'Lobster';
+}
+
+.percentage-symbol {
+    color: black;
+    font-size: 2.4rem;
+    font-weight: 570;
+}
+
+.data-point-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-point-container > div {
+    flex: 0 0 30%;
+    font-size: 1.15rem;
+    font-family: 'acumin';
+    font-weight: 549;
+    line-height: 1.4rem;
+}
+
+.read-more-btn {
+    margin-top: 60px;
+    text-align: center;
+}
 
 .back-to-top {
-    width: 8%;
+    width: 100%;
     font-size: 1.2rem;
     cursor: pointer;
     color: black;
-    margin: 5% auto;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    text-align: center;
 }
 
 .ant-space-align-center {
@@ -95,7 +178,7 @@
 }
 
 .ant-btn:hover {
-    border-color: @secondary-color  !important;
+    border-color: @secondary-color !important;
 }
 
 @media @mobile-small {
@@ -206,8 +289,6 @@
     .back-to-top {
         width: 35%;
     }
-
-
 }
 
 @media @mobile-medium {
