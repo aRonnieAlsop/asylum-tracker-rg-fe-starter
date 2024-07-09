@@ -12,6 +12,7 @@ import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
 
+
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
 
@@ -25,6 +26,7 @@ import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
 
 import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
+import Profile from './components/pages/Profile/profile';
 
 const { primary_accent_color } = colors;
 
@@ -59,6 +61,7 @@ export function App() {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
+        <Route path="/profile" component={Profile} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer
