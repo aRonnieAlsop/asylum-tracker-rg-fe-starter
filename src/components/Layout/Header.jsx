@@ -3,13 +3,15 @@ import { Image } from 'antd';
 import { Link } from 'react-router-dom';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
+import LogoutButton from '../logout-button';
 import AuthNav from '../../components/auth-nav';
-import MainNav from '../../components/main-nav';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const { primary_accent_color } = colors;
 
 
 function HeaderContent() {
+  const { isAuthenticated } = useAuth0();
   return (
     <div
       style={{
@@ -31,10 +33,11 @@ function HeaderContent() {
         <Link to="/graphs" style={{ color: '#E2F0F7' }}>
           Graphs
         </Link>
-        <Link>
-        <MainNav />
-        <AuthNav />
-        </Link>
+        {isAuthenticated ? (
+          <LogoutButton /> // Render LogoutButton if authenticated
+        ) : (
+          <AuthNav /> // Render AuthNav (Login button) if not authenticated
+        )}
       </div>
     </div>
   );
