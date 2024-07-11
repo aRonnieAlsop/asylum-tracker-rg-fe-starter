@@ -5,7 +5,6 @@ import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
 import LogoutButton from '../logout-button';
 import LoginButton from '../login-button';
-// import AuthNav from '../../components/auth-nav';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const { primary_accent_color } = colors;

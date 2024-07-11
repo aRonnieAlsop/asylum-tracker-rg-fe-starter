@@ -1,5 +1,3 @@
-// profile.jsx
-
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -14,7 +12,6 @@ const Profile = () => {
       <h2>User Profile</h2>
       <p><strong>Username:</strong> {username}</p>
       <p><strong>Email:</strong> {user.email}</p>
-      {/* You can add more user information here as needed */}
     </div>
   );
 };
